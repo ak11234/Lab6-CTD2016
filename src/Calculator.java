@@ -43,7 +43,7 @@ public class Calculator extends Program {
     }
 
     public void actionPerformed(ActionEvent e) {
-        System.out.println(myStack);
+        //System.out.println(myStack);
         String key;
 
         key = e.getActionCommand();
