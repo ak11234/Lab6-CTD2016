@@ -23,18 +23,19 @@ public class Calculator extends Program {
         add(new JButton("7"));
         add(new JButton("8"));
         add(new JButton("9"));
-        add(new JButton("C"));
+        add(new JButton("+"));
 
         add(new JButton("4"));
         add(new JButton("5"));
         add(new JButton("6"));
-        add(new JButton("+"));
+        add(new JButton("-"));
         add(new JButton("1"));
         add(new JButton("2"));
         add(new JButton("3"));
-
+        add(new JButton("*"));
         add(new JButton("0"));
         add(new JButton("Enter"), "gridwidth=2");
+        add(new JButton("C"));
 
         addActionListeners();
         myStack.push("0");
@@ -94,6 +95,38 @@ public class Calculator extends Program {
                 num2 = new LargeNumber(myStack.pop().toString());
             }
             myStack.push(num1.plus(num2).toString());
+            midNum=false;
+        }
+        if (key.equals("-")) {
+            LargeNumber num1;
+            LargeNumber num2;
+            if (myStack.isEmpty()){
+                num1 =new LargeNumber("0");
+            } else {
+                num1 = new LargeNumber(myStack.pop().toString());
+            }
+            if (myStack.isEmpty()){
+                num2 = new LargeNumber("0");
+            } else {
+                num2 = new LargeNumber(myStack.pop().toString());
+            }
+            myStack.push(num2.minus(num1).toString());
+            midNum=false;
+        }
+        if (key.equals("*")) {
+            LargeNumber num1;
+            LargeNumber num2;
+            if (myStack.isEmpty()){
+                num1 =new LargeNumber("0");
+            } else {
+                num1 = new LargeNumber(myStack.pop().toString());
+            }
+            if (myStack.isEmpty()){
+                num2 = new LargeNumber("0");
+            } else {
+                num2 = new LargeNumber(myStack.pop().toString());
+            }
+            myStack.push(num2.times(num1).toString());
             midNum=false;
         }
         myDisplay.setText(myStack.top().toString());
