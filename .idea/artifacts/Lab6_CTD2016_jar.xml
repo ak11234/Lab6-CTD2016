@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Lab6-CTD2016:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Lab6_CTD2016_jar</output-path>
+    <root id="archive" name="Lab6-CTD2016.jar">
+      <element id="module-output" name="Lab6-CTD2016" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/acm.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/acminvoker.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
